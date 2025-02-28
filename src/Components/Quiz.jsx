@@ -15,7 +15,7 @@ export default function Quiz({ quizFile }) {
     }
   }, [quizFile, runParse, resetQuiz]);
   return (
-    <div className="max-w-4xl bg-dark mx-auto rounded-sm px-6 py-8 shadow">
+    <div className="max-w-4xl bg-dark mx-auto rounded-sm px-10 py-10 shadow mb-6">
       {quizFile === null && (
         <p className="text-center text-sm max-w-lg mx-auto text-white/70">
           No quiz file has been uploaded. Please select a valid file to proceed.
