@@ -1,0 +1,11 @@
+Q) What is the capital of Japan?  
+a) Seoul  
+b) *Tokyo  
+c) Beijing  
+d) Bangkok  
+
+Q) Which element has the chemical symbol 'O'?  
+a) *Oxygen  
+b) Gold  
+c) Silver  
+d) Hydrogen

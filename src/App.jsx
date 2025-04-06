@@ -10,13 +10,17 @@ export default function App() {
     setQuizFile(newFile);
   }
 
+  function removeQuizFile() {
+    setQuizFile(null);
+  }
+
   return (
     <div>
       <header className="mb-6">
         <Header />
         <UploadQuiz quizFile={quizFile} changeQuizFile={changeQuizFile} />
       </header>
-      <Quiz quizFile={quizFile} />
+      <Quiz quizFile={quizFile} removeQuizFile={removeQuizFile} />
     </div>
   );
 }

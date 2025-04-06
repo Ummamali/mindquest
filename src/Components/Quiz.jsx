@@ -3,7 +3,7 @@ import useAsyncStatus from "../hooks/useAsyncStatus";
 import parseQuiz from "../Funcs/parseQuiz";
 import QuizSlides from "./QuizSlides";
 
-export default function Quiz({ quizFile }) {
+export default function Quiz({ quizFile, removeQuizFile }) {
   const [quiz, runParse, resetQuiz] = useAsyncStatus(parseQuiz);
 
   useEffect(() => {
@@ -27,7 +27,9 @@ export default function Quiz({ quizFile }) {
           Hang on! Preparing your next challenge...
         </p>
       )}
-      {quiz.loadStatus === 2 && <QuizSlides quiz={quiz.result} />}
+      {quiz.loadStatus === 2 && (
+        <QuizSlides quiz={quiz.result} removeQuizFile={removeQuizFile} />
+      )}
     </div>
   );
 }

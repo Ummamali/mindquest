@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-export default function Result({ quiz, answers }) {
+export default function Result({ quiz, answers, removeQuizFile }) {
   const [score, setScore] = useState(0);
 
   const percentage = (score / quiz.length) * 100;
+
+  console.log(answers);
 
   useEffect(() => {
     let newScore = 0;
@@ -14,7 +16,7 @@ export default function Result({ quiz, answers }) {
     });
 
     setScore(newScore);
-  }, []);
+  }, [quiz, answers]);
 
   return (
     <div>
@@ -26,7 +28,7 @@ export default function Result({ quiz, answers }) {
       </div>
 
       <div className="space-y-8 fade-in">
-        {quiz.map((question) => (
+        {quiz.map((question, qIdx) => (
           <div key={question.question}>
             <h2 className="text-white/90 mb-3">{question.question}</h2>
             <div className="space-y-2">
@@ -35,7 +37,7 @@ export default function Result({ quiz, answers }) {
                   className={`block w-full text-left p-3 border border-white/20 text-white/80 rounded-sm ${
                     question.correctIndex === i
                       ? "!border-green-500 !text-green-400 bg-black/5"
-                      : i === answers[i]
+                      : answers[qIdx] === i
                       ? "!border-red-500 !text-red-400"
                       : ""
                   }`}
@@ -43,7 +45,7 @@ export default function Result({ quiz, answers }) {
                 >
                   {question.correctIndex === i ? (
                     <i className="fa-solid fa-check mr-3"></i>
-                  ) : i === answers[i] ? (
+                  ) : answers[qIdx] === i ? (
                     <i className="fa-solid fa-xmark mr-3"></i>
                   ) : null}
                   {choice}
@@ -53,6 +55,12 @@ export default function Result({ quiz, answers }) {
           </div>
         ))}
       </div>
+      <button
+        className="px-8 py-2 bg-primary block ml-auto mt-4 rounded-sm text-black/80"
+        onClick={removeQuizFile}
+      >
+        Reset Quiz
+      </button>
     </div>
   );
 }

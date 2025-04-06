@@ -3,7 +3,7 @@ import Boarding from "./Boarding";
 import Questions from "./Questions";
 import Result from "./Result";
 
-export default function QuizSlides({ quiz }) {
+export default function QuizSlides({ quiz, removeQuizFile }) {
   const [quizStep, setQuizStep] = useState(0);
   const [startedAt, setStartedAt] = useState(null);
   const [answers, setAnswers] = useState([]);
@@ -32,6 +32,6 @@ export default function QuizSlides({ quiz }) {
       showResult={showResult}
     />
   ) : (
-    <Result quiz={quiz} answers={answers} />
+    <Result quiz={quiz} answers={answers} removeQuizFile={removeQuizFile} />
   );
 }
