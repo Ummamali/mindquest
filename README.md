@@ -35,6 +35,7 @@ Follow these steps to set up and run the Project Manager app locally (Make sure 
      ```sh
      npm run dev
 
+
 ## Technologies Used ⚙️
 
 - **HTML5** – HTML5 is the foundation of the app's structure, providing the semantic layout and supporting multimedia elements. It ensures that the content is accessible and well-organized across all modern browsers.
@@ -53,3 +54,27 @@ Follow these steps to set up and run the Project Manager app locally (Make sure 
 
 - **Git** – Git is a version control system that tracks code changes, facilitates collaboration, and ensures that developers can work on different parts of the project without conflicts. It is essential for maintaining a smooth development workflow.
 
+## 📄 Text File Format
+
+The quiz should be uploaded as a plain text file (.txt) with the following format:
+
+- Each question begins with `Q)` followed by the question text.
+- The answer choices are listed with a letter (`a)`, `b)`, etc.), with the correct answer marked by an asterisk `*` before the answer text.
+
+### Example:
+
+Q) What is the capital of Japan?
+
+a) Seoul
+
+b) *Tokyo
+
+c) Beijing
+
+d) Bangkok
+
+Ensure that each question is formatted in this manner to ensure proper parsing and functionality in the app.
+
+## License  
+
+This project is licensed under the **MIT License**. For more details, visit [MIT License](https://opensource.org/licenses/MIT).  
