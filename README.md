@@ -14,3 +14,23 @@ At the end of the quiz, users receive instant feedback with their total score an
 - **Real-Time Scoring** – Scores are calculated instantly and shown at the end of the quiz.
 - **Answer Review** – Users receive a summary of their answers with correct/incorrect feedback.
 - **Responsive Design** – Fully responsive layout ensures a smooth experience across devices.
+
+## Installation  
+
+Follow these steps to set up and run the Project Manager app locally (Make sure you have Node.js and npm installed before running the commands):  
+
+1. **Clone the repository:**  
+
+    ```sh
+   git clone https://github.com/Ummamali/mindquest.git
+   cd mindquest
+
+3. **Install dependencies:**
+
+      ```sh
+    npm install
+    
+4. **Start the development server:**
+
+     ```sh
+     npm run dev
