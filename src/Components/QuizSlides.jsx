@@ -32,6 +32,11 @@ export default function QuizSlides({ quiz, removeQuizFile }) {
       showResult={showResult}
     />
   ) : (
-    <Result quiz={quiz} answers={answers} removeQuizFile={removeQuizFile} />
+    <Result
+      quiz={quiz}
+      answers={answers}
+      removeQuizFile={removeQuizFile}
+      startedAt={startedAt}
+    />
   );
 }

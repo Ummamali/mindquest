@@ -5,3 +5,11 @@ export function formatTime(milliseconds) {
     .toString()
     .padStart(2, "0")}`;
 }
+
+export function getTimePassed(utc) {
+  const diffMs = Date.now() - utc;
+  const hours = Math.floor(diffMs / (1000 * 60 * 60));
+  const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+  return `Duration: ${hours}h ${minutes}m ${seconds}s`;
+}

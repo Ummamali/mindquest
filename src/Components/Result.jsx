@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { getTimePassed } from "../Funcs/utils";
 
-export default function Result({ quiz, answers, removeQuizFile }) {
+export default function Result({ quiz, answers, removeQuizFile, startedAt }) {
   const [score, setScore] = useState(0);
 
   const percentage = (score / quiz.length) * 100;
@@ -21,10 +22,24 @@ export default function Result({ quiz, answers, removeQuizFile }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-xl text-white/80 font-light">Your Result</h2>
-        <h2 className="text-2xl text-primary font-light">
-          {score} / {quiz.length} ({percentage.toFixed(1)}%)
-        </h2>
+        <div>
+          <h2 className="text-xl text-white/80 font-light mb-1">Your Result</h2>
+          <p className="text-white/40 text-sm italic font-light">
+            Result generated on{" "}
+            {new Date().toLocaleString("en-US", {
+              dateStyle: "long",
+              timeStyle: "medium",
+            })}
+          </p>
+        </div>
+        <div className="text-right">
+          <h2 className="text-2xl text-primary font-light">
+            {score} / {quiz.length} ({percentage.toFixed(1)}%)
+          </h2>
+          <h2 className="text-primary font-light">
+            {getTimePassed(startedAt)}
+          </h2>
+        </div>
       </div>
 
       <div className="space-y-8 fade-in">
