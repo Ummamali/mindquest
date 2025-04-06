@@ -6,6 +6,9 @@ This project is ideal for educators, students, or anyone who wants a quick and c
 
 At the end of the quiz, users receive instant feedback with their total score and a summary of their answers.
 
+
+<img alt="Project Preview" src="./preview.jpg"/>
+
 ## Features ✨
 
 - **Text File Upload** – Easily upload quizzes using a plain `.txt` file with a simple format.
