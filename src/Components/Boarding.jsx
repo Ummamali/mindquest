@@ -26,7 +26,7 @@ export default function Boarding({ quiz, minutes = 15, startQuiz }) {
           Start Quiz
         </button>
         <p className="text-sm text-white/50">
-          Quiz cannot be cancelled one started
+          Quiz cannot be cancelled once started
         </p>
       </div>
     </div>
